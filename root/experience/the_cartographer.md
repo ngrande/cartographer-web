@@ -5,18 +5,33 @@ I know there are plenty of web services like Nginx and apache which can do most 
 
 So here i am.
 
-Now i will guide you though the inner workings of The Cartographer (which is honestly very simply).
+Now let me guide you through the inner workings of The Cartographer (which is honestly very simply).
 
 ## Source Code
 You can find the complete source code of the The Cartographer on github.com.
-The project consists of two repository, from which one is the backend and the otis simply the web content for it:
+The project consists of two repository, from which one is the back end and the other is simply the web content for it:
 
-+ [backend](https://github.com/ngrande/cartographer)
++ [back end](https://github.com/ngrande/cartographer)
 + [web content](https://github.com/ngrande/cartographer-web)
 
 ## Concept
-Simply serve my documents to the end user.
-I like to write notes and documentation in markdown, it's simple and can be done in any editor, so my programming should be able to serve markdown documents as a web view to the end user. But i also did not want to be limited to this functionality, so i wanted to keep it as dumb as possible and just serve whatever is lying around in a given directory. But surely a markdown document can not be displayed properly in a browser - so i had to implement a conversion for such documents.
+Simply serve every document from a directory hierarchy to the web.
+Keep it as simple as possible but also let us have some flexibility.
+
+For a website HTML is the first thing let's add some more to it:<br/>
+Since i like to write notes and documentation in markdown, so we will create a process that is able to serve markdown documents to a web browser in a readable form.
+
+Now we have the first requirements:
+
++ Read a directory hierarchy
++ Serve every file within these directories
++ Support native HTML
++ Support markdown
+
+## Implementation
+
+
+### Conversion
 This means: html and txt files can simply be displayed as-is and all other documents have to get a conversion.
 So i remembered a nice tool for this job: [pandoc](https://pandoc.org/) (side note: this tool is mainly written in an even more interesting language: Haskell - if you want to learn something real new and not just hop form C-like language to another C-like language with different kinds of OOP features: try this functional programming language; it's like starting from zero...).
 
