@@ -4,7 +4,7 @@ this contains the web content of [thecartographer.net](https://thecartographer.n
 ## Cartographer as a backend
 This project really consists of two parts: one is the content which can be found right in here and the other is the server.
 
-The complete code for the server, which is written entirely in Go can be found [here](https://github.com/ngrande/cartographer)o
+The complete code for the server, which is written entirely in Go can be found [here](https://github.com/ngrande/cartographer)
 
 ## File formats
 The content consists mostly of markdown and HTML files as those are my preferred formats and well known by others.
